@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
 use Socialite;
 use App\User;
+use Hash;
 
 class LoginController extends Controller
 {
@@ -57,7 +58,8 @@ class LoginController extends Controller
             'name'     => $user->name,
             'email'    => $user->email,
             'provider' => $provider,
-            'provider_id' => $user->id
+            'provider_id' => $user->id,
+            'password' =>  Hash::make('password', ['rounds' => 12])
         ]);
     }
 
