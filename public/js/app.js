@@ -58592,127 +58592,7 @@ var Index = function (_Component) {
                 'div',
                 null,
                 _react2.default.createElement(_Header2.default, null),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'container' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'card-deck mb-3 text-center' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'card mb-4 shadow-sm' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card-header' },
-                                _react2.default.createElement(
-                                    'h4',
-                                    { className: 'my-0 font-weight-normal' },
-                                    'Free'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card-body' },
-                                _react2.default.createElement(
-                                    'h1',
-                                    { className: 'card-title pricing-card-title' },
-                                    '$0 ',
-                                    _react2.default.createElement(
-                                        'small',
-                                        { className: 'text-muted' },
-                                        '/ mo'
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'ul',
-                                    { className: 'list-unstyled mt-3 mb-4' },
-                                    _react2.default.createElement(
-                                        'li',
-                                        null,
-                                        '10 users included'
-                                    ),
-                                    _react2.default.createElement(
-                                        'li',
-                                        null,
-                                        '2 GB of storage'
-                                    ),
-                                    _react2.default.createElement(
-                                        'li',
-                                        null,
-                                        'Email support'
-                                    ),
-                                    _react2.default.createElement(
-                                        'li',
-                                        null,
-                                        'Help center access'
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'button',
-                                    { type: 'button', className: 'btn btn-lg btn-block btn-outline-primary' },
-                                    'Sign up for free'
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'card mb-4 shadow-sm' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card-header' },
-                                _react2.default.createElement(
-                                    'h4',
-                                    { className: 'my-0 font-weight-normal' },
-                                    'Pro'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card-body' },
-                                _react2.default.createElement(
-                                    'h1',
-                                    { className: 'card-title pricing-card-title' },
-                                    '$15 ',
-                                    _react2.default.createElement(
-                                        'small',
-                                        { className: 'text-muted' },
-                                        '/ mo'
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'ul',
-                                    { className: 'list-unstyled mt-3 mb-4' },
-                                    _react2.default.createElement(
-                                        'li',
-                                        null,
-                                        '20 users included'
-                                    ),
-                                    _react2.default.createElement(
-                                        'li',
-                                        null,
-                                        '10 GB of storage'
-                                    ),
-                                    _react2.default.createElement(
-                                        'li',
-                                        null,
-                                        'Priority email support'
-                                    ),
-                                    _react2.default.createElement(
-                                        'li',
-                                        null,
-                                        'Help center access'
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'button',
-                                    { type: 'button', className: 'btn btn-lg btn-block btn-primary' },
-                                    'Get started'
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(_Footer2.default, null)
-                )
+                _react2.default.createElement(_Footer2.default, null)
             );
         }
     }]);
@@ -70716,13 +70596,17 @@ var _Home = __webpack_require__(264);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Login = __webpack_require__(265);
+var _Profile = __webpack_require__(265);
 
-var _Login2 = _interopRequireDefault(_Login);
+var _Profile2 = _interopRequireDefault(_Profile);
 
-var _Register = __webpack_require__(266);
+var _Historical = __webpack_require__(266);
 
-var _Register2 = _interopRequireDefault(_Register);
+var _Historical2 = _interopRequireDefault(_Historical);
+
+var _Error = __webpack_require__(273);
+
+var _Error2 = _interopRequireDefault(_Error);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -70744,69 +70628,56 @@ var Header = function (_Component) {
     _createClass(Header, [{
         key: 'render',
         value: function render() {
-
             return _react2.default.createElement(
-                'ul',
-                { className: 'nav nav-pills-end' },
+                _reactRouterDom.BrowserRouter,
+                null,
                 _react2.default.createElement(
-                    'li',
-                    { className: 'nav-item' },
+                    'div',
+                    null,
                     _react2.default.createElement(
-                        'a',
-                        { className: 'nav-link active', href: '#' },
-                        'Active'
-                    )
-                ),
-                _react2.default.createElement(
-                    'li',
-                    { className: 'nav-item dropdown' },
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'nav-link dropdown-toggle', 'data-toggle': 'dropdown', href: '#', role: 'button', 'aria-haspopup': 'true', 'aria-expanded': 'false' },
-                        'Dropdown'
+                        'div',
+                        { className: 'navbar navbar-dark bg-success d-flex flex-column flex-md-row align-items-center p-3 px-md-4 border-bottom shadow-sm' },
+                        _react2.default.createElement(
+                            'h5',
+                            { className: 'my-0 mr-md-auto font-weight-normal text-light' },
+                            'RHT CENTER'
+                        ),
+                        _react2.default.createElement(
+                            'nav',
+                            { className: 'my-2 my-md-0 mr-md-3' },
+                            _react2.default.createElement(
+                                _reactRouterDom.Link,
+                                { className: 'p-2 text-light', to: '/' },
+                                'Home'
+                            ),
+                            _react2.default.createElement(
+                                _reactRouterDom.Link,
+                                { className: 'p-2 text-light', to: '/profile' },
+                                'Profile'
+                            ),
+                            _react2.default.createElement(
+                                _reactRouterDom.Link,
+                                { className: 'p-2 text-light', to: '/historical' },
+                                'Historical'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { className: 'btn btn-outline-light text-light', to: '/signout' },
+                            'Sign Out'
+                        )
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'dropdown-menu' },
+                        { className: 'container mt-3' },
                         _react2.default.createElement(
-                            'a',
-                            { className: 'dropdown-item', href: '#' },
-                            'Action'
-                        ),
-                        _react2.default.createElement(
-                            'a',
-                            { className: 'dropdown-item', href: '#' },
-                            'Another action'
-                        ),
-                        _react2.default.createElement(
-                            'a',
-                            { className: 'dropdown-item', href: '#' },
-                            'Something else here'
-                        ),
-                        _react2.default.createElement('div', { className: 'dropdown-divider' }),
-                        _react2.default.createElement(
-                            'a',
-                            { className: 'dropdown-item', href: '#' },
-                            'Separated link'
+                            _reactRouterDom.Switch,
+                            null,
+                            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
+                            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/profile', component: _Profile2.default }),
+                            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/historical', component: _Historical2.default }),
+                            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/*', component: _Error2.default })
                         )
-                    )
-                ),
-                _react2.default.createElement(
-                    'li',
-                    { className: 'nav-item' },
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'nav-link', href: '#' },
-                        'Link'
-                    )
-                ),
-                _react2.default.createElement(
-                    'li',
-                    { className: 'nav-item' },
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'nav-link disabled', href: '#', tabindex: '-1', 'aria-disabled': 'true' },
-                        'Disabled'
                     )
                 )
             );
@@ -72811,12 +72682,83 @@ var Home = function (_Component) {
     }
 
     _createClass(Home, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                null,
-                'This Sholihin.'
+                "div",
+                { className: "card-deck mb-3 text-center" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "card mb-4 shadow-sm" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "card-header bg-light" },
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "my-0 font-weight-normal" },
+                            "RHT Member"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "card-body" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-12" },
+                                _react2.default.createElement(
+                                    "h1",
+                                    { className: "card-title pricing-card-title" },
+                                    _react2.default.createElement(
+                                        "small",
+                                        { className: "text-muted" },
+                                        "Tn. "
+                                    ),
+                                    "Mohamad Sholihin"
+                                ),
+                                _react2.default.createElement(
+                                    "ul",
+                                    { className: "list-unstyled mt-3 mb-4" },
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        _react2.default.createElement(
+                                            "h4",
+                                            null,
+                                            _react2.default.createElement(
+                                                "b",
+                                                null,
+                                                "RHT21201"
+                                            )
+                                        )
+                                    ),
+                                    _react2.default.createElement("li", null),
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        "Ciomas"
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-6" },
+                                _react2.default.createElement("img", { src: "https://uploads.toptal.io/user/photo/241808/large_5a6c56416dcbeec06cc3d14546ab8f79.jpg", className: "img-thumbnail" })
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-6" },
+                                _react2.default.createElement("img", { src: "https://uploads.toptal.io/user/photo/241808/large_5a6c56416dcbeec06cc3d14546ab8f79.jpg", className: "img-thumbnail" })
+                            )
+                        )
+                    )
+                )
             );
         }
     }]);
@@ -72851,30 +72793,51 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Login = function (_Component) {
-    _inherits(Login, _Component);
+var Profile = function (_Component) {
+    _inherits(Profile, _Component);
 
-    function Login() {
-        _classCallCheck(this, Login);
+    function Profile() {
+        _classCallCheck(this, Profile);
 
-        return _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).apply(this, arguments));
     }
 
-    _createClass(Login, [{
-        key: 'render',
+    _createClass(Profile, [{
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
+                "div",
                 null,
-                'This Login.'
+                _react2.default.createElement(
+                    "div",
+                    { className: "container mt-3" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "card-deck mb-3 text-center" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "card mb-4 shadow-sm" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "card-header bg-light" },
+                                _react2.default.createElement(
+                                    "h4",
+                                    { className: "my-0 font-weight-normal" },
+                                    "Profile"
+                                )
+                            ),
+                            _react2.default.createElement("div", { className: "card-body" })
+                        )
+                    )
+                )
             );
         }
     }]);
 
-    return Login;
+    return Profile;
 }(_react.Component);
 
-exports.default = Login;
+exports.default = Profile;
 
 /***/ }),
 /* 266 */
@@ -72901,30 +72864,55 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Register = function (_Component) {
-    _inherits(Register, _Component);
+var Historical = function (_Component) {
+    _inherits(Historical, _Component);
 
-    function Register() {
-        _classCallCheck(this, Register);
+    function Historical() {
+        _classCallCheck(this, Historical);
 
-        return _possibleConstructorReturn(this, (Register.__proto__ || Object.getPrototypeOf(Register)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Historical.__proto__ || Object.getPrototypeOf(Historical)).apply(this, arguments));
     }
 
-    _createClass(Register, [{
-        key: 'render',
+    _createClass(Historical, [{
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
+                "div",
                 null,
-                'This Register.'
+                _react2.default.createElement(
+                    "div",
+                    { className: "container mt-3" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "card-deck mb-3 text-center" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "card mb-4 shadow-sm" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "card-header bg-light" },
+                                _react2.default.createElement(
+                                    "h4",
+                                    { className: "my-0 font-weight-normal" },
+                                    "Historical"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "card-body" },
+                                "Historical"
+                            )
+                        )
+                    )
+                )
             );
         }
     }]);
 
-    return Register;
+    return Historical;
 }(_react.Component);
 
-exports.default = Register;
+exports.default = Historical;
 
 /***/ }),
 /* 267 */
@@ -73154,6 +73142,75 @@ exports.default = Footer;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(239);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Error404 = function (_Component) {
+    _inherits(Error404, _Component);
+
+    function Error404() {
+        _classCallCheck(this, Error404);
+
+        return _possibleConstructorReturn(this, (Error404.__proto__ || Object.getPrototypeOf(Error404)).apply(this, arguments));
+    }
+
+    _createClass(Error404, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'div',
+                    { className: 'container mt-3' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'alert alert-danger' },
+                        '404 page not found. ',
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { to: '/', className: 'alert-link' },
+                            'Back to home'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Error404;
+}(_react.Component);
+
+exports.default = Error404;
 
 /***/ })
 /******/ ]);

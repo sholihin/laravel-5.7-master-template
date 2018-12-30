@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import Home from './Home';
-import Login from './Login';
-import Register from './Register';
+import Profile from './Profile';
+import Historical from './Historical';
+import Error404 from './Error404';
 
 export default class Header extends Component {
     render() {
-        
         return (
-            <ul className="nav nav-pills-end">
-                <li className="nav-item">
-                    <a className="nav-link active" href="#">Active</a>
-                </li>
-                <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">Action</a>
-                    <a className="dropdown-item" href="#">Another action</a>
-                    <a className="dropdown-item" href="#">Something else here</a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#">Separated link</a>
+            <Router>
+                <div>
+                    <div className="navbar navbar-dark bg-success d-flex flex-column flex-md-row align-items-center p-3 px-md-4 border-bottom shadow-sm">
+                        <h5 className="my-0 mr-md-auto font-weight-normal text-light">RHT CENTER</h5>
+                        <nav className="my-2 my-md-0 mr-md-3">
+                            <Link className="p-2 text-light" to="/">Home</Link>
+                            <Link className="p-2 text-light" to="/profile">Profile</Link>
+                            <Link className="p-2 text-light" to="/historical">Historical</Link>
+                        </nav>
+                        <Link className="btn btn-outline-light text-light" to="/signout">Sign Out</Link>
                     </div>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
+                    <div className="container mt-3">
+                        <Switch>
+                            <Route exact path="/" component={Home}/>
+                            <Route exact path="/profile" component={Profile}/>
+                            <Route exact path="/historical" component={Historical}/>
+                            <Route exact path="/*" component={Error404}/>
+                        </Switch>
+                    </div>
+                </div>
+            </Router>
         );
     }
 }
