@@ -14,8 +14,8 @@ class AddSocialRegisterToUserTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('provider')->after('password');
-            $table->string('provider_id')->after('provider');
+            $table->string('provider')->after('password')->nullable();
+            $table->string('provider_id')->after('provider')->nullable();
         });
     }
 
