@@ -10,7 +10,12 @@ use App\User;
 class UserController extends Controller
 {
     public function index(){
-        return response(User::all(),200);
+        $user = User::all();
+        if($user){
+            return response()->json($user, 200);
+        }else{
+            return response()->json(['Data is Empty..'], 200);
+        }
     }
 
     public function show($id){
@@ -27,7 +32,7 @@ class UserController extends Controller
         if($user){
             return response()->json(['message'=>'Create success'], 201);
         }else{
-            return response()->json(['message'=> 'Failed save..!!'], 400);
+            return response()->json(['message'=>'Save failed..!!'], 400);
         }
     }
 
@@ -38,24 +43,18 @@ class UserController extends Controller
             $user->update($request->all());
             return response()->json(['message'=>'Update success'], 200);
         }else{
-            return response()->json(['message'=>'Failed update..!!'], 400);
+            return response()->json(['message'=>'Update failed..!!'], 400);
         }
     }
 
     public function delete($id)
     {
-        try {
-            $user = User::find($id);
-
-            if(isset($user)){
-                $user->delete();
-                return response(null, 204);
-            }else{
-                return response()->json(['Bad Request'], 400);
-            }
-        }
-        catch (Exception $e) {
-            return response()->json([$e->getMessage()]);
+        $user = User::find($id);
+        if($user){
+            $user->delete();
+            return response()->json(['message'=> 'Delete success'], 204);
+        }else{
+            return response()->json(['message'=>'Delete failed..!!'], 400);
         }
     }
 }

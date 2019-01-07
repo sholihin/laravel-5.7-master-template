@@ -4,7 +4,7 @@ export default class Profile extends Component {
     render() {
         return (
             <div>
-                <div className="container mt-3">
+                <div className="container-fluid">
 
                     <div className="card-deck mb-3 text-center">
                         <div className="card mb-4 shadow-sm">

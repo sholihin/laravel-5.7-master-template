@@ -21,6 +21,5 @@
 // Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
 // Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
-Route::get('/{path?}', function () {
-    return view('index');
-});
+Route::get('{path?}', 'HomeController@index');
+Route::get('member/{path?}', 'HomeController@member');
